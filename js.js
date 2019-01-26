@@ -6,6 +6,7 @@ var maxButtons = 4;
 var colors = ["NULL", "red", "darkOrange", "gold", "lime", "cyan", "indigo", "magenta"];
 var currentColor = 1;
 
+var body = document.getElementsByTagName('body')[0];
 var current = document.getElementsByClassName("current")[0];
 var right = document.getElementsByClassName("right")[0];
 var left = document.getElementsByClassName("left")[0];
@@ -64,8 +65,9 @@ function init(){ // run at start to create init colors
 	currentColor = buttonsSwitch(colors.length-1, currentColor);
 
 	current.style.backgroundColor = colors[currentColor];
-	left.style.backgroundColor = colors[buttonsSwitchMinus(colors.length+1, currentColor)];
+	left.style.backgroundColor = colors[buttonsSwitchMinus(colors.length, currentColor)];
 	right.style.backgroundColor = colors[buttonsSwitch(colors.length-1, currentColor)];
+	body.style.backgroundImage =  "linear-gradient(90deg," + right.style.backgroundColor + "," + left.style.backgroundColor + ")";
 }
 init();
 
@@ -83,6 +85,7 @@ right.addEventListener("click", function(){ /*Swap card forward*/
 	current.style.backgroundColor = colors[currentColor];
 	right.style.backgroundColor = colors[buttonsSwitch(colors.length-1, currentColor)];
 	right.style.transition = ".9s background-color 0s";
+	body.style.backgroundImage =  "linear-gradient(90deg," + right.style.backgroundColor + "," + left.style.backgroundColor + ")";
 });
 left.addEventListener("click", function(){ /*Swap card backwards*/
 	buttonCount = buttonsSwitchMinus(maxButtons, buttonCount);
@@ -94,6 +97,7 @@ left.addEventListener("click", function(){ /*Swap card backwards*/
 	left.style.backgroundColor = colors[buttonsSwitchMinus(colors.length-1, currentColor)];
 	left.style.transition = ".9s background-color 0s";
 	current.style.backgroundColor = colors[currentColor];
-	right.style.backgroundColor = colors[buttonsSwitch(colors.length+1, currentColor)];
+	right.style.backgroundColor = colors[buttonsSwitch(colors.length-1, currentColor)];
 	right.style.transition = ".9s background-color 0s";
+	body.style.backgroundImage =  "linear-gradient(90deg," + right.style.backgroundColor + "," + left.style.backgroundColor + ")";
 });
