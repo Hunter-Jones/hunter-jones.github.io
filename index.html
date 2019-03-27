@@ -1,80 +1,75 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta charset="UTF-8">
-		<meta name="description" content="A protfolio for Hunter Jones, a web/software developer">
-		<meta name="autor" content="Hunter Jones">
-		
-		<title>Hunter's Portfolio</title>
-		<link rel="stylesheet" type="text/css" href="css.css">
-		<link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet"> 
-		<link rel="icon" href="icon.png">
-	</head>
-	<body>
-		<div class="left container-item"></div>
-		<div class="right container-item"></div>
-		<div id="container">
-			<div id="projects" class="container-item hidden">
-				<p class="item-title">Projects</p>
-				<div class="item-body">
-				</div>
-			</div>
-			<div id="names" class="container-item current">
-				<p class="item-title no-margin">Hunter Jones</p>
-				<div class="item-body">
-					<h1 id="subtitle">Web/Software Developer</h1>
-					<!-- <img src="icon.png"> < -->
-					<p>Hunter Jones is a high school student living in Ohio. He is passionate about learning as much as he can about web and software development. Hunter knows frontend/backend web development, and he is currently learning software development. Hunter enjoys playing videogames with his friends and learning programming in his spare time.</p>
-					<img src="icon.png" id="icon">
-					<a href="resume.pdf"><button>Resume</button></a>
-				</div>
-			</div>
-			<div id="skills" class="container-item hidden">
-				<p class="item-title">More Info</p>
-				<div class="item-body"> 
-					<ul class="box">
-						<p class="box-title">Skills</p>
-						<li class="list-item"><span class="left-li">Frontend Web Development- </span><span class="right-li">HTML/CSS/JS</span></li>
-						<li class="list-item"><span class="left-li">Backend Web Development- </span><span class="right-li">Node.js</span></li>
-						<li class="list-item"><span class="left-li">Software Development- </span><span class="right-li">Python/JS</span></li>
-						<li class="list-item"><span class="left-li">Soft Skills- </span><span class="right-li">Motivated, Good Problem Solver, Good time management</span></li>
-					</ul>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:500,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="homepage.css">
 
-					<!-- <ul class="box">
-						<p class="box-title">FAQ</p>
-						<li class="list-item"><span class="left-li">Favorite Color:</span><span class="right-li">The current background color</span></li>
-						<li class="list-item"><span class="left-li">Backend Web Development</span><span class="right-li">Node.js</span></li>
-						<li class="list-item"><span class="left-li">Software Development</span><span class="right-li">Python/JS</span></li>
-						<li class="list-item"><span class="left-li">Soft Skills</span><span class="right-li">Motivated ENTER MORE</span></li>
-					</ul> -->
-				</div>
-			</div>
-			<div id="contact" class="container-item hidden">
-				<p class="item-title">Contact</p>
-				<div class="item-body">
-					<p>Here is how to contact me:</p>
-					<a href="https://github.com/HunterTheSnake"><button class="icon">Github</button></a>
-					<!-- <a href=""><button class="icon">Codepen</button></a><br> -->
-					<!-- <a href=""><button class="icon">Linkedin</button></a> -->
-					<!-- <a href=""><button class="icon">Twitter</button></a><br>  -->
-					<div class="form">
-						<form action="mailto:hunterj0915@gmail.com" enctype="multipart/form-data" name="EmailForm">
-							Name:
-							<input type="text" name="subject" placeholder="Obi-Wan Kenobi"><br>
-							<!-- Email:  
-							<input type="text" name="email" placeholder="someone@someone.com"><br> -->
-							<!-- Subject: -->
-							<!-- <input type="text" name="subject" placeholder="Hello There!"><br> -->
-							Content:
-							<textarea id="form-content" name="body" placeholder="Hello There!"></textarea><br>
-							<button id="form-button" type="submit" value="sun">Submit</button><br>
-						</form>
-					<p>Email: hunterj0915@gmail.com</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script src="js.js"></script>
-	</body>
+      <meta charset="UTF-8">
+      <meta name="description" content="A portfolio page created by engineering student and web developer Hunter Jones">
+      <meta name="keywords" content="HTML,CSS,JavaScript">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Hunter Jones">
+
+      <title>Hunter's Portfolio Website</title>
+      <link rel="shortcut icon" href="logo.png" />
+    </head>
+    <body>
+
+      <div class="window">
+          <div class="name"> <!-- blue bg-->
+              <div class="name-image"> <!-- image -->
+              </div>
+              <div class="name-text"> <!-- text -->
+                  <p class="main-name">Hunter Jones</p>
+                  <p>Web developer</p>
+                  <div class="contact">
+                      <a href="https://codepen.io/HunterTheSnake/#" target="_blank">
+                          Codepen<br>
+                          <img alt="Codepen" src="codepen-icon.png">
+                      </a>
+                      <a href="mailto: hunterj0915@gmail.com" target="_blank">
+                          Email<br>
+                          <img alt="Email" src="email-icon.png">
+                      </a>
+                      <a href="resume.pdf" target="_blank">
+                          Resume PDF<br>
+                          <img alt="Resume" src="pdf-icon.png">
+                      </a>
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="text">
+              <div class="intro">
+                  <p>I am a high school student, web developer, and engineering student. Scoll or press the arrows on the side to view more information</p>
+              </div>
+              <div class="acheivements">
+                <p>Achievements:</p>
+                <ul>
+                    <li>Have been on High Honors (GPA greater than 3.85) each semester this year</li>
+                    <li>Took Computer Science I/II, Pre-Engineering I</li>
+                    <li>Taking Pre-Engineering II and AP ap Computer Science Principles</li>
+                    <li>Took online courses on Python, JavaScript/ Web Development</li>
+                    <li>Intern at New Territory where I have created social augmented reality experiences and created an Android aplication in Unity game engine</li>
+                    <li>I have delivered pizzas at your pizza shop</li>
+                </ul>
+              </div>
+              <div class="pitch">
+                  <p>About me: </p>
+                  <p>Hello, my name is Hunter Jones and I am  attending <!-- Keep future text at this max line length-->
+                      Archbishop Hoban High School in Akron Ohio. I enjoy playing games on my computer and computer programming and plan
+                      to major in computer science and software engineering. I am currently interning at New Territory creating social AR
+                      experiences and using Unity game engine, while also balancing my time with school work and delivering pizzas
+                      at Your Pizza Shop. I am looking for an internship over the Summer and I hope to be able to work with you in the future.
+                  </p>
+              </div>
+              </div>
+          </div>
+      </div>
+<img class="arrow" id="arrow-left" src="arrow.png">
+<img class="arrow" id="arrow-right" src="arrow.png">
+
+      <script type="text/javascript" src="homepage.js"></script>
+    </body>
 </html>
