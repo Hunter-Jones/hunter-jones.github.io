@@ -1,0 +1,168 @@
+/* TODO:
+    Time spent 2 hour 50 minutes
+    Coming along well
+    Remember to keep it to your style (focus a lot on js over css)
+
+    !Change color of text to random and add a gradient to it
+    !Add more js, the goal is to make this have as much js as possible
+    Add buttons for scrolling on mobile instead on right/ left*/
+
+:root {
+    --main-color: rgb(87,119,249); /*Lightish blue color*/
+    --secondary-color: white;
+    --initialPosition:42%; /* match js initialPosition (js will have 3 more for margin)*/
+}
+
+html, body {
+    height: 100%;
+    width:100%;
+    margin:0;
+
+    overflow: hidden; /* Fixes height modify when all text scrolls past screen*/
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.window {
+    display: flex;
+    flex-direction: row;
+}
+.name {
+    width: 40vw;
+    height:100vh;
+    text-align: center;
+
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+
+    z-index: 1; /* Makes it so this div is over the other, so text cant go overtop of */
+}
+
+.name-image {
+    width: 100%;
+    height:100vh;
+    position: relative;
+    background: url("/assets/programming-stock.png");
+    background-size: 100% 100%;
+    opacity: .05;
+}
+.name-text {
+    width: 100%;
+    height:100vh;
+    position: relative;
+    bottom:100%;
+}
+
+.name p {
+    font-size: 2.5vw;
+    margin: 0;
+    margin-left: 3%;
+}
+
+.name .main-name {
+    font-size: 3.9vw;
+    margin-top:15%; /* 100% is half of screen*/
+}
+
+.contact {
+    background-color: var(--secondary-color);;
+    height: 25%;
+    width:60%;
+    font-size: 1vw;
+    margin: auto; margin-top: 18.75vh; /*25% is half*/
+    border-radius: 15%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact a{
+    font-size: 1vw;
+    text-decoration: none;
+    color: var(--main-color);
+
+    /* border: 4px solid black; */
+    height:60%;
+    width: 60%;
+    margin: auto; margin-top: 0; margin-bottom: 0;
+}
+
+.contact img {
+    width: 12%;
+    border-radius: 50%;
+    background-color:var(--main-color);
+}
+
+.text {
+    position:absolute;
+    left: var(--initialPosition);
+    padding-left:3%;
+    color:  var(--main-color);
+    background-color: var(--secondary-color);
+    /* height: 50%; */
+
+    font-size: 1.9vw;
+
+    overflow: hidden;
+    z-index: 0;
+    margin:0;
+
+    display: flex;
+    flex-direction: row;
+
+    top:0;
+    bottom:0;
+}
+@media screen and (orientation:portrait) {
+    .text {
+        font-size: 2.85vw;
+    }
+    .name p {
+        font-size: 3.75vw;
+    }
+    .main-name {
+        font-size: 5.85vw;
+    }
+    .contact {
+        font-size: 1.5vw;
+    }
+    .contact img {
+        width: 18%;
+    }
+ }
+
+.text div {
+    width:50vw;
+    margin-right: 70vw; /* Perfect number to scroll completely past 50vw last panel*/
+    /* display:block; */
+    /* background-color: var(--main-color);
+    color: var(--secondary-color); */
+    /* margin: auto; */
+    /* position: absolute; */
+    /* height:90vh; */
+    margin-top: auto; margin-bottom: auto;
+    top:500px;
+}
+
+.text div p {
+    /* white-space: pre; */
+    text-align: center;
+}
+
+.arrow {
+    /* display: block; */
+    /* background-color: black; */
+    width:3vw;
+    height: 3vw;
+    position:absolute;
+    top:50%;
+    z-index: 2;
+
+}
+#arrow-left {
+    left:40.5%; /*40 is end of blue line so only .5 out */
+    transform:rotate(180deg)
+}
+#arrow-right {
+    right:.5%;
+}
