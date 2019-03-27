@@ -9,17 +9,23 @@
 
 :root {
     --main-color: rgb(87,119,249); /*Lightish blue color*/
-    --secondary-color: white;
+    --secondary-color: #fff;
+    --secondary-color-dark: #111;
     --initialPosition:42%; /* match js initialPosition (js will have 3 more for margin)*/
 }
 
 html, body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none; /*Anti zoom features*/
+
     height: 100%;
     width:100%;
     margin:0;
 
     overflow: hidden; /* Fixes height modify when all text scrolls past screen*/
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: var(--secondary-color);
 }
 
 .window {
@@ -65,9 +71,8 @@ html, body {
 
 .contact {
     background-color: var(--secondary-color);;
-    height: 25%;
+    min-height: 25%;
     width:60%;
-    font-size: 1vw;
     margin: auto; margin-top: 18.75vh; /*25% is half*/
     border-radius: 15%;
 
@@ -88,7 +93,7 @@ html, body {
 }
 
 .contact img {
-    width: 12%;
+    width: 18%;
     border-radius: 50%;
     background-color:var(--main-color);
 }
@@ -123,11 +128,11 @@ html, body {
     .main-name {
         font-size: 5.85vw;
     }
-    .contact {
-        font-size: 1.5vw;
+    .contact a {
+        font-size: 3vw;
     }
     .contact img {
-        width: 18%;
+        width: 36%;
     }
  }
 
@@ -164,13 +169,14 @@ html, body {
 }
 #arrow-right {
     right:-0%; /* 7% is edge*/
-    
+
 }
 .arrow-img {
     position: absolute;
     width:3vw;
     height: 3vw;
     top:50%;
+    pointer-events: none; /*makes image unselectable*/
 }
 #arrow-left img {
     transform:rotate(180deg);

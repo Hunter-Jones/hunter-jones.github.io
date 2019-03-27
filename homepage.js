@@ -1,6 +1,6 @@
 var text = document.querySelector(".text");
 var rightArrow = document.querySelector("#arrow-right");
-leftArrow = document.querySelector("#arrow-left");
+var leftArrow = document.querySelector("#arrow-left");
 
 var initialPosition = 42;
 var minPosition = 97;
@@ -10,11 +10,11 @@ var position = initialPosition;  // used to concotnate the position and %, start
 window.addEventListener("wheel", function(event){
     mousescroll(event);
 })
-rightArrow.addEventListener("click", function(){
-    buttonPress(true);
+rightArrow.addEventListener("mousedown", function(){
+    autoScroll(true, rightArrow);
 })
 leftArrow.addEventListener("mousedown", function(){
-    buttonPress(false);
+    autoScroll(false, leftArrow);
 })
 
 function mousescroll(event) {
@@ -57,17 +57,17 @@ function getDirection(event) {  // checks if scrolling up or down [true if up, d
     }
 }
 
-function buttonPress(button){
+function buttonPress(button, speed){  // happens each time you click on the button to make it scroll once
     if(button){  // scroll up
         if (position < minPosition) { // makes sure text doesnt go too far left
-            position += 4;
+            position += speed;
         } else {
             position = maxPosition
         }
     }
     else {  // scroll down
         if (position > maxPosition) {
-            position -= 4;
+            position -= speed;
         } else {
             position = minPosition;
         }
@@ -76,4 +76,14 @@ function buttonPress(button){
     text.style.left = position + "%";
 
     scroll(0,0); // Makes the page scroll to top, so even if the page is 101 height it can scroll forever
+}
+
+function autoScroll(directionBool, parent) {  // allows buttonPress to be run while the button is held down
+    // buttonPress(directionBool, .5);
+    var autoScroll = setInterval(function(){
+        buttonPress(directionBool, .4);
+        parent.addEventListener("mouseup", function(){
+            clearInterval(autoScroll);
+        })
+    }, 16.67) // 60fps (1000/60)
 }
