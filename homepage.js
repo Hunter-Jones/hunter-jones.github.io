@@ -78,7 +78,7 @@ function buttonPress(button, speed){  // happens each time you click on the butt
         if (position < minPosition) { // makes sure text doesnt go too far left
             position += speed;
         } else {
-            position = maxPosition
+            position = maxPosition;
         }
     }
     else {  // scroll down
@@ -99,9 +99,16 @@ function autoScroll(directionBool, parent) {  // allows buttonPress to be run wh
     var autoScroll = setInterval(function(){
         buttonPress(directionBool, .4);
         
+        parent.addEventListener("touchmove", function(){  // move/cancel are to fix github ios bug
+            clearInterval(autoScroll);
+        });
+                parent.addEventListener("touchcancel", function(){
+            clearInterval(autoScroll);
+        });
         parent.addEventListener("touchend", function(){
             clearInterval(autoScroll);
         });
+        
         parent.addEventListener("mouseup", function(){
             clearInterval(autoScroll);
         });
