@@ -6,16 +6,32 @@ var initialPosition = 42;
 var minPosition = 97;
 var maxPosition = -253;
 var position = initialPosition;  // used to concotnate the position and %, starts at 30% width
+var desktop = true;
 
 window.addEventListener("wheel", function(event){
     mousescroll(event);
-})
-rightArrow.addEventListener("mousedown", function(){
+});
+
+rightArrow.addEventListener("touchstart", function(){  // mobile
+    desktop = false;  // will cause the mousedown event to not run if run (mobile will run both mousedown and touchstart, but only work with touchstart)
     autoScroll(true, rightArrow);
-})
-leftArrow.addEventListener("mousedown", function(){
+});
+leftArrow.addEventListener("touchstart", function(){
+    desktop = false;
     autoScroll(false, leftArrow);
-})
+});
+
+rightArrow.addEventListener("mousedown", function(){  // desktop
+    if(desktop) {  // only runs if mobile function hasnt run
+        autoScroll(true, rightArrow); 
+    }
+});
+leftArrow.addEventListener("mousedown", function(){
+    if (desktop) {
+        autoScroll(false, leftArrow);
+    }
+});
+
 
 function mousescroll(event) {
     // console.log(position);
@@ -23,7 +39,7 @@ function mousescroll(event) {
         if (position < minPosition) { // makes sure text doesnt go too far left
             position += 4;
         } else {
-            position = maxPosition
+            position = maxPosition;
         }
     }
     else {  // scroll down
@@ -82,8 +98,12 @@ function autoScroll(directionBool, parent) {  // allows buttonPress to be run wh
     // buttonPress(directionBool, .5);
     var autoScroll = setInterval(function(){
         buttonPress(directionBool, .4);
+        
+        parent.addEventListener("touchend", function(){
+            clearInterval(autoScroll);
+        });
         parent.addEventListener("mouseup", function(){
             clearInterval(autoScroll);
-        })
-    }, 16.67) // 60fps (1000/60)
+        });
+    }, 16.67); // 60fps (1000/60)
 }
