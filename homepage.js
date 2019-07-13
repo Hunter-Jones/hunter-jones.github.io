@@ -106,11 +106,11 @@ function autoScroll(directionBool, parent) {  // allows buttonPress to be run wh
                 parent.addEventListener("touchcancel", function(){
             clearInterval(autoScroll);
         });
-        body.addEventListener("touchend", function(){
+        parent.addEventListener("touchend", function(){
             clearInterval(autoScroll);
         });
         
-        parent.addEventListener("mouseup", function(){
+        body.addEventListener("mouseup", function(){
             clearInterval(autoScroll);
         });
     }, 16.67); // 60fps (1000/60)
