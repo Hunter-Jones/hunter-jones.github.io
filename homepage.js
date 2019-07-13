@@ -1,6 +1,7 @@
 var text = document.querySelector(".text");
 var rightArrow = document.querySelector("#arrow-right");
 var leftArrow = document.querySelector("#arrow-left");
+var body = document.getElementsByTagName("body")[0];
 
 var initialPosition = 42;
 var minPosition = 97;
@@ -105,7 +106,7 @@ function autoScroll(directionBool, parent) {  // allows buttonPress to be run wh
                 parent.addEventListener("touchcancel", function(){
             clearInterval(autoScroll);
         });
-        parent.addEventListener("touchend", function(){
+        body.addEventListener("touchend", function(){
             clearInterval(autoScroll);
         });
         
