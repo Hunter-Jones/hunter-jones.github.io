@@ -31,7 +31,7 @@ function recolor(array)
 {
 	for(var i = 0; i < allBoxes.length; ++i)
 	{
-		allBoxes[i].setAttribute("style", "background-color: " + array[i % 6] + " !important;");
+		allBoxes[i].setAttribute("style", "background-color: " + array[i % 6] + ";");
 	}
 }
 
@@ -68,7 +68,8 @@ function revertOrRecolor(index)
 	}
 	else
 	{
-		recolor(defaultColorsArray[index]);
+		// recolor(defaultColorsArray[index]);
+		recolor(defaultColors);
 		showCards(index)
 	}
 }
