@@ -15,7 +15,7 @@ body {
 }
 .container .box {
   width: 33.33333%;
-  height: 50vh;
+  min-height: 50vh;
 }
 .container .box:hover {
   background-color: transparent !important;
@@ -49,18 +49,27 @@ body {
 }
 .header .heading {
   font-size: 27;
-  line-height: 0%;
   margin-top: 10%;
   margin-bottom: 1.5%;
 }
 .header .subheading {
+  margin-top: -2.5%;
+  padding: 0;
+  margin-bottom: -2%;
+}
+.header .subheading-left, .header .subheading-right {
   width: 50%;
-  float: left;
   height: 15%;
   margin-bottom: 0;
+  margin-top: 0;
 }
 .header .subheading-right {
   float: right;
+  text-align: right;
+}
+.header .subheading-left {
+  float: left;
+  text-align: left;
 }
 
 .content {
@@ -70,6 +79,7 @@ body {
   width: 80%;
   margin-top: 2%;
   padding-top: 0;
+  float: bottom;
 }
 .content ul {
   display: table;
@@ -77,6 +87,12 @@ body {
 }
 .content li, .content p {
   margin-bottom: 1.5%;
+}
+.content p {
+  text-align: center;
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 40vh;
 }
 
 .more-info:hover {
