@@ -26,38 +26,20 @@ body {
 .container .box:nth-child(1) {
   background-color: #F60000;
 }
-.container .box:nth-child(1):hover {
-  background-color: #09ffff !important;
-}
 .container .box:nth-child(2) {
   background-color: #FF8C00;
-}
-.container .box:nth-child(2):hover {
-  background-color: #0073ff !important;
 }
 .container .box:nth-child(3) {
   background-color: #FEDC56;
 }
-.container .box:nth-child(3):hover {
-  background-color: #0123a9 !important;
-}
 .container .box:nth-child(4) {
   background-color: #4DE94C;
-}
-.container .box:nth-child(4):hover {
-  background-color: #b216b3 !important;
 }
 .container .box:nth-child(5) {
   background-color: #3783FF;
 }
-.container .box:nth-child(5):hover {
-  background-color: #c87c00 !important;
-}
 .container .box:nth-child(6) {
   background-color: #4815AA;
-}
-.container .box:nth-child(6):hover {
-  background-color: #b7ea55 !important;
 }
 
 .header {

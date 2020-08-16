@@ -41,7 +41,7 @@ for(var i = 0; i < allBoxes.length; ++i)
 	if (allBoxes[i].classList.contains("more-info"))
 	{
 		allBoxes[i].addEventListener("click", function(){
-			revertOrRecolor([this.className[0] - 1]);
+			revertOrRecolor([this.id[0] - 1]);
 			// NOTE: For this to work, all boxes must have a class nindex where n is a number 1-6 
 			// This must be the first class in the variable
 		});

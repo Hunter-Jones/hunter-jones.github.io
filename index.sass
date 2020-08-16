@@ -29,31 +29,33 @@ body
 
 		&:nth-child(1)
 			background-color: #F60000
-			&:hover
-				background-color: #09ffff !important
 		&:nth-child(2)
 			background-color: #FF8C00
-			&:hover
-				background-color: #0073ff !important
 		&:nth-child(3)
 			background-color: #FEDC56
-			&:hover
-				background-color: #0123a9 !important
 		&:nth-child(4)
 			background-color: #4DE94C
-			&:hover
-				background-color: #b216b3 !important
 		&:nth-child(5)
 			background-color: #3783FF
-			&:hover
-				background-color: #c87c00 !important
 		&:nth-child(6)
 			background-color: #4815AA
-			&:hover
-				background-color: #b7ea55 !important
 
 		// margin: .25%  // Make div width 32.7 if so
 		// border-radius: 5%
+
+
+	//Device = Tablets, Ipads (portrait)
+@media (min-width: 768px) and (max-width: 1024px) 
+
+
+	//Device = Tablets, Ipads (landscape)
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
+  
+	//Device = Low Resolution Tablets, Mobiles (Landscape)
+@media (min-width: 481px) and (max-width: 767px) 
+
+	//Device = Most of the Smartphones Mobiles (Portrait)
+@media (min-width: 320px) and (max-width: 480px)
 
 .header
 	text-align: center
