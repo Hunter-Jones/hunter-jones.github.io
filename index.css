@@ -65,16 +65,19 @@ body {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -0.5vh;
 }
 .header .heading {
   font-size: 27;
-  margin-top: 10%;
   margin-bottom: 1.5%;
 }
 .header .subheading {
-  margin-top: -2.5%;
+  margin-top: 0;
   padding: 0;
-  margin-bottom: -2%;
+  margin-bottom: 0;
+}
+.header .subheading-small {
+  font-size: 15px;
 }
 .header .subheading-left, .header .subheading-right {
   width: 50%;
