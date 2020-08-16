@@ -10,10 +10,11 @@ const yellowBoxColors = ["#fedc56", "#e5c64d", "#cbb045", "#fee378", "#fee067", 
 const greenBoxColors = ["#4de94c", "#3eba3d", "#2e8c2e", "#94f294", "#71ed70", "#4de94c"];
 const blueBoxColors = ["#3783ff", "#2c69cc", "#214f99", "#87b5ff", "#5f9cff", "#3783ff"];
 const indigoBoxColors = ["#4815aa", "#3a1188", "#2b0d66", "#a48ad5", "#6d44bb", "#4815aa"];
+var monochromeColorsArray = [redBoxColors, orangeBoxColors, yellowBoxColors, greenBoxColors, blueBoxColors, indigoBoxColors];
 
 // Default colors
 var defaultColors = ["#F60000", "#FF8C00", "#FEDC56", "#4DE94C", "#3783FF", "#4815AA"];
-var defaultColorsArray = [redBoxColors, orangeBoxColors, yellowBoxColors, greenBoxColors, blueBoxColors, indigoBoxColors];
+var defaultColorsInverse = ["#09ffff", "#0073ff", "#0123a9", "#b216b3", "#c87c00", "#b7ea55"];
 
 var fullEducation = document.getElementById("education-full");
 var fullExperience = document.getElementById("experience-full");
@@ -69,7 +70,7 @@ function revertOrRecolor(index)
 	else
 	{
 		// recolor(defaultColorsArray[index]);
-		recolor(defaultColors);
+		recolor(defaultColorsInverse);
 		showCards(index)
 	}
 }

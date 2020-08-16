@@ -18,8 +18,10 @@ body {
   min-height: 50vh;
 }
 .container .box:hover {
-  transition: background-color 0.75s ease-in;
+  transition: 0.75s ease-in;
   transition-delay: 0.3s;
+  filter: invert(100);
+  color: black;
 }
 .container .box:nth-child(1) {
   background-color: #F60000;

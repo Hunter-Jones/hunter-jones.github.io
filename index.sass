@@ -22,8 +22,10 @@ body
 		min-height: 50vh
 
 		&:hover
-			transition: background-color .75s ease-in
+			transition: .75s ease-in
 			transition-delay: .3s
+			filter: invert(100)
+			color: black // Flashes gray then white, remove this and switch to backdrop-filter instead of filter, if you want text to have no animation
 
 		&:nth-child(1)
 			background-color: #F60000
