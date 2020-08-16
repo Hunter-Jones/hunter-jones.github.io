@@ -11,37 +11,60 @@ body {
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
-.container div {
+.container .box {
   width: 33.33333%;
   height: 50vh;
 }
-.container div:hover {
+.container .box:hover {
   background-color: transparent !important;
 }
-.container div:nth-child(1) {
+.container .box:nth-child(1) {
   background-color: #F60000;
 }
-.container div:nth-child(2) {
+.container .box:nth-child(2) {
   background-color: #FF8C00;
 }
-.container div:nth-child(3) {
+.container .box:nth-child(3) {
   background-color: #FEDC56;
 }
-.container div:nth-child(4) {
+.container .box:nth-child(4) {
   background-color: #4DE94C;
 }
-.container div:nth-child(5) {
+.container .box:nth-child(5) {
   background-color: #3783FF;
 }
-.container div:nth-child(6) {
+.container .box:nth-child(6) {
   background-color: #4815AA;
 }
 
 .header {
   text-align: center;
-  font-size: 27px;
+  display: block;
+  font-size: 16px;
+}
+.header .heading {
+  font-size: 27;
+  line-height: 0%;
+  margin-top: 10%;
+  margin-bottom: 1.5%;
+}
+.header .subheading {
+  width: 50%;
+  float: left;
+  margin-bottom: 5%;
+}
+.header .subheading-right {
+  float: right;
+}
+
+.content {
+  text-align: left;
+  font-size: 16px;
+  margin-top: 20%;
+}
+.content li, .content p {
+  margin-bottom: 1.5%;
 }
 
 .more-info:hover {
