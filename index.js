@@ -24,10 +24,12 @@ var fullAbout = document.getElementById("about-full");
 var fullContact = document.getElementById("contact-full");
 const fullDivArray = [fullExperience, fullAbout, fullProjects, fullEducation, "", fullContact];
 
+var buttonInvert = document.getElementById("buttonInvert");
+var buttonRave = document.getElementById("buttonRave");
+
 // Setup
 	addButtons();
-
-
+	raveButtonClick();
 
 // Pre: Should be run once in setup and never again
 // Post: Adds a clickEvent to 
@@ -62,10 +64,10 @@ function isHomepage()
 	// Starts with a counter set to 0 and incraments by 1 each time it runs
 	// This will return true the 1st, 3rd, 5th, etc times run
     if( typeof isHomepage.bool == 'undefined' ) {
-        isHomepage.bool = 0;
+        isHomepage.bool = false;
     }
-    ++isHomepage.bool;
-    return isHomepage.bool % 2 == 0;
+    isHomepage.bool = !isHomepage.bool
+    return !isHomepage.bool;
 }
 
 // Pre: Requires an index 0-5, cooresponding to a set of subpage boxes in the fullDivArray
@@ -78,8 +80,8 @@ function swapBoxesController(index)
 {
 	if (isHomepage())
 	{
-		recolor(defaultColors);
 		showHomeBoxes(); 
+		recolor(defaultColors);
 	}
 	else
 	{
@@ -109,4 +111,46 @@ function showSubBoxes(index)
 {
 	fullDivArray[index].setAttribute("style", "display: flex !important");
 	boxesContainer.setAttribute("style", "display: none !important");
+}
+
+function raveButtonClick(timesRun=10)
+{
+	// Creates a flag to test if it is already running
+	if( typeof raveButtonClick.raveIntervalFlag == 'undefined')
+	{
+		raveButtonClick.raveIntervalFlag = false;
+	}
+	
+	buttonRave.addEventListener("click", function()
+	{
+		// Checks the flag to see if the function is already running
+		// If so it cancels the remaining time
+		if (raveButtonClick.raveIntervalFlag)  
+		{
+			clearInterval(raveInterval);
+			recolor(defaultColors);
+			raveButtonClick.raveIntervalFlag = false;
+			return;
+		}
+
+		var i = 0;  // Could just count backward from timesRun, but this letters monochromearray start at 0
+		raveButtonClick.raveIntervalFlag = true;
+
+		raveInterval = setInterval(function()
+		{
+			recolor(monochromeColorsArray[i % 6]);
+
+			++i;
+			// When timeRuns is 0, it ends
+			if (i  > timesRun)
+			{
+				clearInterval(raveInterval);
+				recolor(defaultColors)
+				raveButtonClick.raveIntervalFlag = false;
+				return;
+			}
+
+		}, 1000);
+		
+	});
 }

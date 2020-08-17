@@ -46,48 +46,41 @@ body
 		width: 50% !important
 		min-height: 34vh !important
 
-	.return 
-		order: -2
-	.more-info	
-		order: 1
-	.empty
-		order: 2
 	//Device = Tablets, Ipads (landscape)
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
 	.box
 		width: 100% !important
 		min-height: 27vh !important
 
-	.return 
-		order: -2
 	.more-info	
-		order: 1
-	.empty
 		order: 2
+	.return 
+		order: -1 !important
+	.empty
+		order: 3
+
+	.hide-landscape
+		display: none
 	//Device = Low Resolution Tablets, Mobiles (Landscape)
 @media (min-width: 481px) and (max-width: 767px) 
 	.box
 		width: 100% !important
 		min-height: 27vh !important
 
-	.return 
-		order: -2
 	.more-info	
-		order: 1
-	.empty
 		order: 2
+	.return 
+		order: -1 !important
+	.empty
+		order: 3
+
+	.hide-landscape
+		display: none
 	//Device = Most of the Smartphones Mobiles (Portrait)
 @media (min-width: 320px) and (max-width: 480px)
 	.box
 		width: 50% !important
 		min-height: 45vh !important
-
-	.return 
-		order: -2
-	.more-info	
-		order: 1
-	.empty
-		order: 2
 
 .header
 	text-align: center
