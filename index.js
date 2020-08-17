@@ -20,12 +20,32 @@ var fullEducation = document.getElementById("education-full");
 var fullExperience = document.getElementById("experience-full");
 var fullProjects = document.getElementById("projects-full");
 var fullAbout = document.getElementById("about-full");
-var fullSkills = document.getElementById("skills-full");
+// var fullSkills = document.getElementById("skills-full");
 var fullContact = document.getElementById("contact-full");
-const fullDivArray = [fullEducation, fullExperience, fullProjects, fullAbout, fullSkills, fullContact];
+const fullDivArray = [fullExperience, fullAbout, fullProjects, fullEducation, "", fullContact];
+
+// Setup
+	addButtons();
 
 
-console.log(fullDivArray)
+
+// Pre: Should be run once in setup and never again
+// Post: Adds a clickEvent to 
+function addButtons()
+{
+	for(var i = 0; i < allBoxes.length; ++i)
+	{
+		if (allBoxes[i].classList.contains("more-info"))
+		{
+			allBoxes[i].addEventListener("click", function(){
+				swapBoxesController([this.id[0] - 1]);
+				// NOTE: For this to work, all boxes must have a class nindex where n is a number 1-6 
+				// This must be the first class in the variable
+			});
+		}
+	}
+}
+
 // Pre requires an array of 6 HEX codes
 // Post, sets each box equal to the color in array cooresponding to its index
 function recolor(array)
@@ -36,56 +56,56 @@ function recolor(array)
 	}
 }
 
-for(var i = 0; i < allBoxes.length; ++i)
+// Post: Returns true if the homepage boxes are visible
+function isHomepage()
 {
-	if (allBoxes[i].classList.contains("more-info"))
-	{
-		allBoxes[i].addEventListener("click", function(){
-			revertOrRecolor([this.id[0] - 1]);
-			// NOTE: For this to work, all boxes must have a class nindex where n is a number 1-6 
-			// This must be the first class in the variable
-		});
-	}
-}
-
-// Starts with a counter set to 0 and incraments by 1 each time it runs
-// Returns true the first time, and every time after that
-// Used to tell if the squares are rainbow or monocolor
-function isRainbow()
-{
-    if( typeof isRainbow.bool == 'undefined' ) {
-        isRainbow.bool = 0;
+	// Starts with a counter set to 0 and incraments by 1 each time it runs
+	// This will return true the 1st, 3rd, 5th, etc times run
+    if( typeof isHomepage.bool == 'undefined' ) {
+        isHomepage.bool = 0;
     }
-    ++isRainbow.bool;
-    return isRainbow.bool % 2 == 0;
+    ++isHomepage.bool;
+    return isHomepage.bool % 2 == 0;
 }
 
-function revertOrRecolor(index)
+// Pre: Requires an index 0-5, cooresponding to a set of subpage boxes in the fullDivArray
+
+ // If the user is on the homepage
+	// Shows the subpage cooresponding to index's boxes
+	// Sets the boxes to inverse color pattern
+// If the user is on a subpage 
+function swapBoxesController(index)
 {
-	if (isRainbow())
+	if (isHomepage())
 	{
 		recolor(defaultColors);
-		showDefaultCards(); 
+		showHomeBoxes(); 
 	}
 	else
 	{
 		// recolor(defaultColorsArray[index]);
 		recolor(defaultColorsInverse);
-		showCards(index)
+		showSubBoxes(index);
 	}
 }
 
-function showDefaultCards()
+// Post: Hides all non-homepage boxes and makes the homepage boxes reappear
+function showHomeBoxes()
 {
 	boxesContainer.setAttribute("style", "display: flex !important");
 	for(var i = 0; i < fullDivArray.length; ++i)
 	{
-		fullDivArray[i].setAttribute("style", "display: none !important");
+		if (fullDivArray[i])
+		{  // Will give a warning without the if statement when run with return button on subpages
+			fullDivArray[i].setAttribute("style", "display: none !important");
+		}
 	}
 
 }
 
-function showCards(index)
+// Pre: Requires an index 0-5, cooresponding to a set of subpage boxes in the fullDivArray
+// Post: Hides all homepage boxes and makes the subpage, index's boxes visible
+function showSubBoxes(index)
 {
 	fullDivArray[index].setAttribute("style", "display: flex !important");
 	boxesContainer.setAttribute("style", "display: none !important");
