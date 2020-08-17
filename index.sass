@@ -18,14 +18,8 @@ body
 
 	.box
 		// color: white
-		width: 33.33333%
+		width: 33.333%
 		min-height: 50vh
-
-		&:hover
-			transition: .75s ease-in
-			transition-delay: .3s
-			filter: invert(100)
-			color: black // Flashes gray then white, remove this and switch to backdrop-filter instead of filter, if you want text to have no animation
 
 		&:nth-child(1)
 			background-color: #F60000
@@ -40,22 +34,60 @@ body
 		&:nth-child(6)
 			background-color: #4815AA
 
-		// margin: .25%  // Make div width 32.7 if so
-		// border-radius: 5%
-
+	.more-info:hover
+		transition: .75s ease-in
+		transition-delay: .3s
+		filter: invert(100)
+		color: black // Flashes gray then white, remove this and switch to backdrop-filter instead of filter, if you want text to have no animation
 
 	//Device = Tablets, Ipads (portrait)
 @media (min-width: 768px) and (max-width: 1024px) 
+	.box
+		width: 50% !important
+		min-height: 34vh !important
 
-
+	.return 
+		order: -2
+	.more-info	
+		order: 1
+	.empty
+		order: 2
 	//Device = Tablets, Ipads (landscape)
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
-  
+	.box
+		width: 100% !important
+		min-height: 27vh !important
+
+	.return 
+		order: -2
+	.more-info	
+		order: 1
+	.empty
+		order: 2
 	//Device = Low Resolution Tablets, Mobiles (Landscape)
 @media (min-width: 481px) and (max-width: 767px) 
+	.box
+		width: 100% !important
+		min-height: 27vh !important
 
+	.return 
+		order: -2
+	.more-info	
+		order: 1
+	.empty
+		order: 2
 	//Device = Most of the Smartphones Mobiles (Portrait)
 @media (min-width: 320px) and (max-width: 480px)
+	.box
+		width: 50% !important
+		min-height: 45vh !important
+
+	.return 
+		order: -2
+	.more-info	
+		order: 1
+	.empty
+		order: 2
 
 .header
 	text-align: center

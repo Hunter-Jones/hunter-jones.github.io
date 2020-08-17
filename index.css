@@ -14,14 +14,8 @@ body {
   justify-content: center;
 }
 .container .box {
-  width: 33.33333%;
+  width: 33.333%;
   min-height: 50vh;
-}
-.container .box:hover {
-  transition: 0.75s ease-in;
-  transition-delay: 0.3s;
-  filter: invert(100);
-  color: black;
 }
 .container .box:nth-child(1) {
   background-color: #F60000;
@@ -41,7 +35,85 @@ body {
 .container .box:nth-child(6) {
   background-color: #4815AA;
 }
+.container .more-info:hover {
+  transition: 0.75s ease-in;
+  transition-delay: 0.3s;
+  filter: invert(100);
+  color: black;
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .box {
+    width: 50% !important;
+    min-height: 34vh !important;
+  }
+
+  .return {
+    order: -2;
+  }
+
+  .more-info {
+    order: 1;
+  }
+
+  .empty {
+    order: 2;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .box {
+    width: 100% !important;
+    min-height: 27vh !important;
+  }
+
+  .return {
+    order: -2;
+  }
+
+  .more-info {
+    order: 1;
+  }
+
+  .empty {
+    order: 2;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .box {
+    width: 100% !important;
+    min-height: 27vh !important;
+  }
+
+  .return {
+    order: -2;
+  }
+
+  .more-info {
+    order: 1;
+  }
+
+  .empty {
+    order: 2;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .box {
+    width: 50% !important;
+    min-height: 45vh !important;
+  }
+
+  .return {
+    order: -2;
+  }
+
+  .more-info {
+    order: 1;
+  }
+
+  .empty {
+    order: 2;
+  }
+}
 .header {
   text-align: center;
   display: block;
