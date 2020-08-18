@@ -204,7 +204,7 @@ function xhrRequest(url, element, callackFunction)
   		if (xhr.readyState === 4) 
   		{
   			// Successful return
-   			if (false) 
+   			if (xhr.status == 200) 
    			{
       			var parsedData = JSON.parse(xhr.responseText)
 
