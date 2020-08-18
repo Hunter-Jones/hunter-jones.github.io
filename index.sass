@@ -164,6 +164,49 @@ button
 	&:hover
 		transform: translate(1px, 2px)
 		box-shadow: 2px 4px 0 0 #c20000
+		
+
 	&:active
 		transform: translate(2px, 4px)
 		box-shadow: 1px 2px #8f0000
+
+#button-rave
+	&:hover
+		animation: rave-button-keyframe steps(1) 10s 0s
+
+#button-invert
+	&:hover
+		filter: invert(100)
+		border-color: white
+
+@keyframes rave-button-keyframe 
+		10%
+			background-color: #FF8C00
+			box-shadow: 2px 4px 0 0 #cc7000
+		20%
+			background-color: #FEDC56
+			box-shadow: 2px 4px 0 0 #e5c64d
+		30%
+			background-color: #4DE94C
+			box-shadow: 2px 4px 0 0 #3eba3d
+		40%
+			background-color: #3783FF
+			box-shadow: 2px 4px 0 0 #2c69cc
+		50%
+			background-color: #4815AA
+			box-shadow: 2px 4px 0 0 #3a1188
+		60%
+			background-color: #F60000
+			box-shadow: 2px 4px 0 0 #c50000
+		70%
+			background-color: #FF8C00
+			box-shadow: 2px 4px 0 0 #cc7000
+		80%
+			background-color: #FEDC56
+			box-shadow: 2px 4px 0 0 #e5c64d
+		90%
+			background-color: #4DE94C
+			box-shadow: 2px 4px 0 0 #3eba3d
+		100%
+			background-color: #3783FF
+			box-shadow: 2px 4px 0 0 #2c69cc

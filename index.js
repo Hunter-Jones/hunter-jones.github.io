@@ -35,6 +35,7 @@ var gitProjects = document.getElementsByClassName("github-project");
 // ---Setup---
 	addButtons();
 	raveButtonClick();
+	
 
 	addEachLatestCommit(gitProjects);
 
