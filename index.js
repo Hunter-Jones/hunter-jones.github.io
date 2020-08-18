@@ -172,17 +172,30 @@ function addEachLatestCommit(projectArray)
 
 	for(var i = 0; i < projectArray.length; ++i)
 	{
-		addLatestCommit(projectArray[i].id, projectArray[i]);
+		// https://api.github.com/repos/Hunter-Jones/computersciencenotes/commits/master
+		var commitElement = projectArray[i].getElementsByClassName("github-commit")[0];
+		var commitUrl = "https://api.github.com/repos/Hunter-Jones/" + projectArray[i].id + "/commits/master";
+
+
+		// https://api.github.com/repos/hunter-jones/computersciencenotes
+		var descriptionElement = projectArray[i].getElementsByClassName("github-description")[0];
+		var descriptionUrl = "https://api.github.com/repos/hunter-jones/" + projectArray[i].id;
+		
+		xhrRequest(commitUrl, commitElement, parseCommitMessage);
+		xhrRequest(descriptionUrl, descriptionElement, parseDescriptionMessage);
+		
 	}
 }
+// GET IDS FIZED
+
 
 // Helper function that runs on each addEachLatestCommit
-// Pre: requires the github repoName and the document element that the information should go in
-// Post: uses the github restv3 api and 
-function addLatestCommit(repoName, element)
+// Pre: requires a url, a document element, and a callback function
+// Post: uses xhr, to go to url and then parses with json, then calls callbackfunction to allow you to parse it even further, then sets element equal to the data
+function xhrRequest(url, element, callackFunction)
 {
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "https://api.github.com/repos/Hunter-Jones/" + repoName + "/commits/master");
+	xhr.open("GET", url);
 	xhr.send(null);
 
 	xhr.onreadystatechange = function () 
@@ -191,16 +204,16 @@ function addLatestCommit(repoName, element)
   		if (xhr.readyState === 4) 
   		{
   			// Successful return
-   			if (xhr.status === 200) 
+   			if (false) 
    			{
       			var parsedData = JSON.parse(xhr.responseText)
 
       			// Adds the commit message to the element
-      			element.innerHTML = parseMessage(parsedData, 125);
+      			element.innerHTML = callackFunction(parsedData);
    			} 
    			else 
    			{
-     			console.log('Error: ' + xhr.status); // An error occurred during the request.
+     			// console.log("There is an error reaching github's api. The data being presented is what is last saved"); // An error occurred during the request.
     		}
   		}
 	};
@@ -209,7 +222,7 @@ function addLatestCommit(repoName, element)
 // Helper function of lastGitCommit
 // Pre: requires the xhr data after being JSON.parsed and an optional variable for the max size of the messge
 // Post: parses the message to be added
-function parseMessage(data, maxMessageSize=-1)
+function parseCommitMessage(data, maxMessageSize=125)
 {
 	var content = data.commit.message;
     var date = parseDate(data.commit.committer.date);
@@ -223,6 +236,11 @@ function parseMessage(data, maxMessageSize=-1)
     }
     // If not over size limit
     return message;
+}
+
+function parseDescriptionMessage(data)
+{
+	return data.description;
 }
 
 
