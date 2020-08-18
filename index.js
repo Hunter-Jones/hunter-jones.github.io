@@ -35,7 +35,7 @@ var gitProjects = document.getElementsByClassName("github-project");
 // ---Setup---
 	addButtons();
 	raveButtonClick();
-	
+	invertButtonClick();
 
 	addEachLatestCommit(gitProjects);
 
@@ -122,32 +122,38 @@ function showSubBoxes(index)
 {
 	fullDivArray[index].setAttribute("style", "display: flex !important");
 	boxesContainer.setAttribute("style", "display: none !important");
+
+	// Reset buttons
+	invertButtonClick.flag = false;
+	raveButtonClick.flag = false;
+	clearInterval(raveButtonClick.raveInterval);
 }
 
 function raveButtonClick(timesRun=10)
 {
 	// Creates a flag to test if it is already running
-	if( typeof raveButtonClick.raveIntervalFlag == 'undefined')
+	if( typeof raveButtonClick.flag == 'undefined')
 	{
-		raveButtonClick.raveIntervalFlag = false;
+		raveButtonClick.flag = false;
+		raveButtonClick.raveInterval;
 	}
 	
 	buttonRave.addEventListener("click", function()
 	{
 		// Checks the flag to see if the function is already running
 		// If so it cancels the remaining time
-		if (raveButtonClick.raveIntervalFlag)  
+		if (raveButtonClick.flag)  
 		{
-			clearInterval(raveInterval);
+			clearInterval(raveButtonClick.raveInterval);
 			recolor(defaultColors);
-			raveButtonClick.raveIntervalFlag = false;
+			raveButtonClick.flag = false;
 			return;
 		}
 
 		var i = 0;  // Could just count backward from timesRun, but this letters monochromearray start at 0
-		raveButtonClick.raveIntervalFlag = true;
+		raveButtonClick.flag = true;
 
-		raveInterval = setInterval(function()
+		raveButtonClick.raveInterval = setInterval(function()
 		{
 			recolor(monochromeColorsArray[i % 6]);
 
@@ -155,15 +161,40 @@ function raveButtonClick(timesRun=10)
 			// When timeRuns is 0, it ends
 			if (i  > timesRun)
 			{
-				clearInterval(raveInterval);
+				clearInterval(raveButtonClick.raveInterval);
 				recolor(defaultColors)
-				raveButtonClick.raveIntervalFlag = false;
+				raveButtonClick.flag = false;
 				return;
 			}
 
 		}, 1000);
 		
 	});
+}
+
+function invertButtonClick()
+{
+	// Creates a flag to test if it is already inverted
+	// Also creates the raveInterval which is a setInterval
+	if(typeof invertButtonClick.flag == 'undefined')
+	{
+		invertButtonClick.flag = false;
+		raveButtonClick.raveInterval;
+	}
+
+	buttonInvert.addEventListener("click", function()
+	{
+		if(!invertButtonClick.flag)
+			recolor(defaultColorsInverse);
+		else
+			recolor(defaultColors);
+
+		invertButtonClick.flag = !invertButtonClick.flag
+	
+	//Reset rave button if it is currently going on
+	raveButtonClick.flag = false;
+	clearInterval(raveButtonClick.raveInterval);
+	})
 }
 
 // Pre: Requires an array of html text elements where the id of the element is it's github repo name
