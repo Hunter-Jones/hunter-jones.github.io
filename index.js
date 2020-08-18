@@ -16,6 +16,7 @@ var monochromeColorsArray = [redBoxColors, orangeBoxColors, yellowBoxColors, gre
 var defaultColors = ["#F60000", "#FF8C00", "#FEDC56", "#4DE94C", "#3783FF", "#4815AA"];
 var defaultColorsInverse = ["#09ffff", "#0073ff", "#0123a9", "#b216b3", "#c87c00", "#b7ea55"];
 
+// Each of the full box sections
 var fullEducation = document.getElementById("education-full");
 var fullExperience = document.getElementById("experience-full");
 var fullProjects = document.getElementById("projects-full");
@@ -24,17 +25,21 @@ var fullAbout = document.getElementById("about-full");
 var fullContact = document.getElementById("contact-full");
 const fullDivArray = [fullExperience, fullAbout, fullProjects, fullEducation, "", fullContact];
 
+// Buttons to add fun effects
 var buttonInvert = document.getElementById("button-invert");
 var buttonRave = document.getElementById("button-rave");
 
-// Setup
+// All projects to add github utilities to
+var gitProjects = document.getElementsByClassName("github-project");
+
+// ---Setup---
 	addButtons();
 	raveButtonClick();
 
-	lastGitCommitUpdater("hunterthesnake.github.io", document.getElementById("hunterthesnake.github.io"));
-	lastGitCommitUpdater("imdb-downloader", document.getElementById("imdb-downloader"));
-	lastGitCommitUpdater("computersciencenotes", document.getElementById("computersciencenotes"));
-	//TODO: MAKE THE ID THE URL FOR GITHUB AND THE CLASSNAME PROJECT THEN AUTOMATICALLY LOOP THROUGH ALL .PROJECT AND USE THE ID
+	addEachLatestCommit(gitProjects);
+
+
+
 
 // Pre: Should be run once in setup and never again
 // Post: Adds a clickEvent to 
@@ -160,9 +165,21 @@ function raveButtonClick(timesRun=10)
 	});
 }
 
+// Pre: Requires an array of html text elements where the id of the element is it's github repo name
+// Post: Goes through each element and adds it's latest commit
+function addEachLatestCommit(projectArray)
+{
+
+	for(var i = 0; i < projectArray.length; ++i)
+	{
+		addLatestCommit(projectArray[i].id, projectArray[i]);
+	}
+}
+
+// Helper function that runs on each addEachLatestCommit
 // Pre: requires the github repoName and the document element that the information should go in
 // Post: uses the github restv3 api and 
-function lastGitCommitUpdater(repoName, element)
+function addLatestCommit(repoName, element)
 {
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", "https://api.github.com/repos/Hunter-Jones/" + repoName + "/commits/master");
@@ -179,7 +196,7 @@ function lastGitCommitUpdater(repoName, element)
       			var parsedData = JSON.parse(xhr.responseText)
 
       			// Adds the commit message to the element
-      			element.innerHTML = parseMessage(parsedData);
+      			element.innerHTML = parseMessage(parsedData, 125);
    			} 
    			else 
    			{
@@ -190,16 +207,27 @@ function lastGitCommitUpdater(repoName, element)
 }
 
 // Helper function of lastGitCommit
-// Pre: requires the xhr data after being JSON.parsed
+// Pre: requires the xhr data after being JSON.parsed and an optional variable for the max size of the messge
 // Post: parses the message to be added
-function parseMessage(data)
+function parseMessage(data, maxMessageSize=-1)
 {
-	var message = data.commit.message;
+	var content = data.commit.message;
     var date = parseDate(data.commit.committer.date);
-    return "Latest commit <br>" + date + "<br>" + message;
+
+    var message =  "Latest commit <br>" + date + "<br>" + content;
+
+    // if over size limit
+    if(maxMessageSize != -1 && message.length >= maxMessageSize - 3)
+    {
+    	return message.substring(0, maxMessageSize - 3) + "...";
+    }
+    // If not over size limit
+    return message;
 }
 
 
+// Pre: Requires a date in the YYYY-MM-DDTHH:MM:SSZ format
+// Post: Returns a more human readable date in the format of MonthName D/DD, YYYY
 function parseDate(githubDate)
 {
 	var monthsArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
