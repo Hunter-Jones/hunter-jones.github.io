@@ -24,12 +24,17 @@ var fullAbout = document.getElementById("about-full");
 var fullContact = document.getElementById("contact-full");
 const fullDivArray = [fullExperience, fullAbout, fullProjects, fullEducation, "", fullContact];
 
-var buttonInvert = document.getElementById("buttonInvert");
-var buttonRave = document.getElementById("buttonRave");
+var buttonInvert = document.getElementById("button-invert");
+var buttonRave = document.getElementById("button-rave");
 
 // Setup
 	addButtons();
 	raveButtonClick();
+
+	lastGitCommitUpdater("hunterthesnake.github.io", document.getElementById("hunterthesnake.github.io"));
+	lastGitCommitUpdater("imdb-downloader", document.getElementById("imdb-downloader"));
+	lastGitCommitUpdater("computersciencenotes", document.getElementById("computersciencenotes"));
+	//TODO: MAKE THE ID THE URL FOR GITHUB AND THE CLASSNAME PROJECT THEN AUTOMATICALLY LOOP THROUGH ALL .PROJECT AND USE THE ID
 
 // Pre: Should be run once in setup and never again
 // Post: Adds a clickEvent to 
@@ -153,4 +158,55 @@ function raveButtonClick(timesRun=10)
 		}, 1000);
 		
 	});
+}
+
+// Pre: requires the github repoName and the document element that the information should go in
+// Post: uses the github restv3 api and 
+function lastGitCommitUpdater(repoName, element)
+{
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", "https://api.github.com/repos/Hunter-Jones/" + repoName + "/commits/master");
+	xhr.send(null);
+
+	xhr.onreadystatechange = function () 
+	{
+ 		// Request is done
+  		if (xhr.readyState === 4) 
+  		{
+  			// Successful return
+   			if (xhr.status === 200) 
+   			{
+      			var parsedData = JSON.parse(xhr.responseText)
+
+      			// Adds the commit message to the element
+      			element.innerHTML = parseMessage(parsedData);
+   			} 
+   			else 
+   			{
+     			console.log('Error: ' + xhr.status); // An error occurred during the request.
+    		}
+  		}
+	};
+}
+
+// Helper function of lastGitCommit
+// Pre: requires the xhr data after being JSON.parsed
+// Post: parses the message to be added
+function parseMessage(data)
+{
+	var message = data.commit.message;
+    var date = parseDate(data.commit.committer.date);
+    return "Latest commit <br>" + date + "<br>" + message;
+}
+
+
+function parseDate(githubDate)
+{
+	var monthsArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+	var year = githubDate.substring(0, 4);
+	var monthIndex = githubDate.substring(5, 7);
+	var day = githubDate.substring(8, 10);
+
+	return monthsArray[monthIndex - 1] + " " + day +", " + year;
 }
