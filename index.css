@@ -150,6 +150,13 @@ body {
 .content li, .content p {
   margin-bottom: 1.5%;
 }
+.content li div, .content p div {
+  margin-bottom: 7.5%;
+  padding-left: 0;
+}
+.content li div p, .content p div p {
+  margin: 0;
+}
 .content p {
   text-align: center;
   width: 100%;
