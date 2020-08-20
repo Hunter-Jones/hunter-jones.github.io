@@ -136,12 +136,12 @@ body {
 
 .content {
   font-size: 16px;
-  margin-top: 20%;
-  margin-right: auto;
   width: 80%;
+  margin-left: 10%;
   margin-top: 2%;
   padding-top: 0;
   float: bottom;
+  text-align: center;
 }
 .content ul {
   display: table;
@@ -152,7 +152,6 @@ body {
 }
 .content li div, .content p div {
   margin-bottom: 7.5%;
-  padding-left: 0;
 }
 .content li div p, .content p div p {
   margin: 0;
@@ -160,14 +159,24 @@ body {
 .content p {
   text-align: center;
   width: 100%;
-  margin-left: 10%;
 }
 
 .more-info:hover {
   cursor: pointer;
 }
 
-button {
+.button-download {
+  background-color: #00F800;
+  padding: 5% 7.5% 5% 7.5%;
+  border: 0;
+  border-radius: 25%;
+}
+.button-download:hover {
+  background-color: #00E000;
+  transition: 0.2s;
+}
+
+.button-effect {
   padding: 6%;
   margin: 3%;
   border-radius: 30%;
@@ -176,11 +185,11 @@ button {
   cursor: pointer;
   background-color: #F60000;
 }
-button:hover {
+.button-effect:hover {
   transform: translate(1px, 2px);
   box-shadow: 2px 4px 0 0 #c20000;
 }
-button:active {
+.button-effect:active {
   transform: translate(2px, 4px);
   box-shadow: 1px 2px #8f0000;
 }
@@ -196,7 +205,7 @@ button:active {
 
 .content-bottom {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }

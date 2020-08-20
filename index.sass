@@ -15,7 +15,7 @@ body
 	// align-items:stretch
 	justify-content: center
 	// align-content: stretch
-
+	
 	.box
 		// color: white
 		width: 33.333%
@@ -33,7 +33,7 @@ body
 			background-color: #3783FF
 		&:nth-child(6)
 			background-color: #4815AA
-
+			
 	.more-info:hover
 		transition: .75s ease-in
 		transition-delay: .3s
@@ -118,12 +118,13 @@ body
 .content
 	// text-align: left
 	font-size: 16px
-	margin-top:20%
-	margin-right: auto
+	// margin-right: auto
 	width: 80%
+	margin-left: 10%  // Baed on width (80) 100-80 = 20 20/2 = 10 centers
 	margin-top: 2%
 	padding-top: 0
 	float: bottom
+	text-align: center
 
 	ul
 		display: table
@@ -134,7 +135,6 @@ body
 
 		div
 			margin-bottom: 7.5%
-			padding-left: 0
 
 			p
 				margin: 0
@@ -142,7 +142,6 @@ body
 	p
 		text-align: center
 		width: 100%
-		margin-left:10%
 
 
 .more-info
@@ -150,7 +149,17 @@ body
 	&:hover
 		cursor: pointer
 
-button
+.button-download
+	background-color: #00F800
+	padding: 5% 7.5% 5% 7.5%
+	border: 0
+	border-radius: 25%
+
+	&:hover
+		background-color: #00E000
+		transition: .2s 
+
+.button-effect
 	padding: 6%
 	margin: 3%
 
