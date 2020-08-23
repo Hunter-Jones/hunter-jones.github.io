@@ -215,8 +215,12 @@ body {
   margin: 3%;
   border-radius: 30%;
   border: 0;
-  background-repeat: repeat;
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: center;
+}
+.button-logo:hover {
+  cursor: pointer;
 }
 
 #linkedin-logo {
@@ -229,6 +233,11 @@ body {
 
 #codepen-logo {
   background-image: url("images/logos/codepen-logo.png");
+}
+
+#email-logo {
+  background-image: url("images/logos/email-logo.png");
+  filter: grayscale(100%);
 }
 
 @keyframes rave-button-keyframe {
