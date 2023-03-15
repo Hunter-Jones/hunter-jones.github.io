@@ -1,421 +1,182 @@
+<!-- TODO:
+
+1. Implement Projects Section
+2. Modify Text Sizes
+3. Check padding and width one last time
+4. Attach email me and resumes
+5. Add github and linkedin link on right side of navbar
+6. Stylize navbar and sticky it
+7. Add animation for hover effects
+8. Add footer
+9. Add navbar scroll effect 
+10.Fix when on phone-->
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hunter's Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="./index.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hunter Jones Portfolio</title>
+	<link rel="stylesheet" href="./index.css"></style>
+
+	<link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-	<div id="main-container" class="container">
+<!-- 	<div class="navbar">
+		<ul class="navbar-content">
+	  		<li class="navbar-link"><a href="default.html">Education</a></li>
+	  		<li class="navbar-link"><a href="news.html">Work Experience</a></li>
+	  		<li class="navbar-link"><a href="contact.html">Projects</a></li> 
+	  		<li class="navbar-link"><a href="about.html">About Me</a></li> -->
 
-		<div id="1stBox" class="box more-info">
-			<div class="header">
-				<h1 class="heading">Experience</h1>
-			</div>
+ 			<!-- <li class="navbar-link-right"><a href="">Test</a></li> -->
+<!--  			<div class="navbar-link-right">
+ 				<a href=""><img src="./Assets/github-logo.png"></a>
+ 				<a class="navbar-link-right" href=""><img src="./Assets/linkedin-logo.png"></a>
+ 			</div>
+		</ul>
+	</div> -->
 
-			<div class="content">
-				<p>I have internerned and worked at many companies doing various tasks including IT support, programming, and 3D modelling</p>
-			</div>
-		</div>
+<!-- <nav class="navbar navbar-custom navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Hunter Jones</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarNav">
+    <ul class="navbar-nav">
+      	<li class="nav-item">
+      	  <a class="nav-link" href="#">Education</a>
+      	</li>
+      	<li class="nav-item">
+        	<a class="nav-link" href="#">Experience</a>
+      	</li>
+      	<li class="nav-item">
+        	<a class="nav-link" href="#">Projects</a>
+      	</li>
+      	<li class="nav-item">
+        	<a class="nav-link" href="#">Projects</a>
+      	</li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" style="float:right!important">
+        <li class="nav-item ml-auto">
+      		<a href=""><img src="./Assets/github-logo.png"></a>
+     	</li>
+     	<li>
+     		<a href=""><img src="./Assets/linkedin-logo.png"></a>
+     	</li>
+    </ul>
+  </div>
+</nav> -->
 
+<!-- Temporary, when finished use above version -->
 
-		<div id="2ndBox" class="box">
-			<div class="header">
-				<h1 class="heading">Hunter Jones</h1>
-			</div>
+<nav class="navbar navbar-custom navbar-expand-lg navbar-light">
+  <!-- <a class="navbar-brand" href="#">Hunter Jones</a> -->
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> -->
+    <!-- <span class="navbar-toggler-icon"></span> -->
+  </button>
+  <div id="navbarNav">
+  	    <ul class="navbar-nav" >
+        <li class="nav-item ml-auto">
+      		<a href="https://github.com/Hunter-Jones/"><img src="./Assets/github-logo.png"></a>
+     	</li>
+     	<li>
+     		<a href="https://www.linkedin.com/in/hunter-jones-13668012a/"><img src="./Assets/linkedin-logo.png"></a>
+     	</li>
+    </ul>
 
-			<div class="content">
-				<p>I a computer science student who enjoys working on programming projects and relaxing with friends</p>
-				<p>If you want to learn more about a various topic, click the cooresponding box, the resume button below or any of the other buttons to add a fun effect to the page</p>
-			</div>
-			<div class="content">
-				<a href="https://drive.google.com/file/d/196xG_-O8wrRSZWQr_fehpULeLc-MJq6E/view?usp=sharing"><button class="button-download">Resume</button></a>
-			</div>
-			<div class="content-bottom hide-landscape">
-				<button id="button-rave" class="button-effect"></button>
-				<button id="button-invert" class="button-effect"></button>
-			</div>
-		</div>
+  </div>
+</nav>
 
-		<div id="3rdBox" class="box more-info">
-			<div class="header">
-				<h1 class="heading">Projects</h1>
-			</div>
+	<div class="sections">
 
-			<div class="content">
-				<p>I have multiple projects which are uploaded to Github to demonstrate the computer science knowledge that I have learned</p>
-			</div>
-		</div>
+		<div class="section">
+			<h2 class="section-headline">Education</h2>
+			<hr class="section-headline-hr">
 
-		<div id="4thBox" class="box more-info">
-			<div class="header">
-				<h1 class="heading">Education</h1>
-			</div>
-
-			<div class="content">
-				<p>I am a student attending Kent State University as part of the class of 2024 studying for a bachelors degree in computer science</p>
-			</div>
-		</div>
-
-		<div id="5thBox" class="box empty">
-			<div class="header">
-				<!-- <h1 class="heading">Skills</h1> -->
-			</div>
-
-			<div class="content">
-				<!-- <p>I have am a computer science student </p> -->
-			</div>
-		</div>
-
-		<div id="6thBox" class=" box more-info">
-			<div class="header">
-				<h1 class="heading">Contact Info</h1>
-			</div>
-
-			<div class="content">
-				<p>If you would like to send me a message or see what I am up to, click here</p>
-			</div>
-		</div>
-	</div>
-
-
-
-<div id="projects-full" class="full container">	
-
-		<a class="box" href="https://github.com/Hunter-Jones/IMDB-Downloader">
-			<div>
-				<div class="header more-info">
-					<h1 class="heading">Web Scraper</h1>
-					<h3 class="subheading subheading-small">EJS(HTML), JS, SASS(CSS), Node.js</h3>
-				</div>
-				<div id="imdb-downloader" class="content github-project">
-					<p class="github-description">This is a project that can search for the top movies in a specific genre by web scrapping the imdb website. It will then pull up the links to the top 10 from various peer-to-peer downloading websites</p>
-					<p class="github-commit">Latest commit unknown </p>
-				</div>
-			</div>
-		</a>
-
-		<div class="box more-info return">
-			<div class="header">
-				<h1 class="heading">Return</h1>
-			</div>
-			<div class="content">
-				<p>Return to the main menu or click any project to get redirected to it's github page</p>
-			</div>
-		</div>
-
-		<a class="box" href="https://github.com/Hunter-Jones/hunter-jones.github.io">
-			<div>
-				<div class="header">
-					<h1 class="heading">Portfolio Site</h1>
-					<h3 class="subheading subheading-small">HTML, SASS(CSS), JS</h3>	
-				</div>
-				<div class="content github-project" id="hunterthesnake.github.io">
-					<p class="github-description">A portfolio created to show my computer science experience</p>
-					<p class="github-commit">Latest commit unknown</p>
-				</div>
-			</div>
-		</a>
-		<div class="box empty">
-			<div class="header">
-				<h1 class="heading"></h1>
-			</div>
-			<div class="content">
-			</div>
-		</div>
-
-		<a class="box" href="https://github.com/Hunter-Jones/computersciencenotes">
-			<div>
-				<div class="header">
-					<h1 class="heading">Course Notes</h1>
-					<h3 class="subheading subheading-small">C++</h3>
-				</div>
-				<div class="content github-project" id="computersciencenotes">
-					<p class="github-description">This is a project that can search for the top movies in a specific genre by web scrapping the imdb website. It will then pull up the links to the top 10 from various peer-to-peer downloading websites</p>
-					<p class="github-commit">Last commit unknown</p>
-				</div>
-			</div>
-		</a>
-
-		<div class="box empty">
-			<div class="header">
-			</div>
-			<div class="content">
-			</div>
-		</div>
-	</div>	
-
-	<div id="experience-full" class="full container">
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">CNC Shop Intern</h1>
-				<h2 class="subheading">Masters Precision Machining Inc</h2>
-				<div class="subheading subheading-left">
-					<h3>Kent, Ohio</h3>
-				</div>
-				<div class="subheading subheading-right">
-					<h3>January 2020 - March 2020</h3>
-				</div>	
-			</div>
-			<div class="content">
-				<ul>
-					<li>One of 4 students who took part in a Pre-Engineering III Co-op experience at my High School</li>
-					<li>Used Fusion 360 CAD software to create 3D models to be milled on CNC machines</li>
-					<li>Aided machinists milling and programming on CNC machines</li>
+			<div class="entry">
+				<h3 class="entry-headline">Computer Science Major <span class="entry-headline-right">August 2020 - May 2024</span></h3>
+				<p class="entry-subheadline"><span>Kent State,</span> <i>Kent Ohio</i></p>
+				<p class=entry-subheadline>Concentration: Data Science</p>
+				<ul class="entry-content">
 				</ul>
 			</div>
 		</div>
 
-		<div class="box more-info return">
-			<div class="header">
-				<h1 class="heading">Return</h1>
-			</div>
+		<div class="section">
+			<h2 class="section-headline">Work Experience</h2>
+			<hr class="section-headline-hr">
 
-			<div class="content">
-				<p>Return to the main menu</p>
-			</div>
-		</div>	
-
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">Technology Intern</h1>
-				<h2 class="subheading">New Territory</h2>
-				<div class="subheading subheading-left">
-					<h3>Akron, Ohio</h3>
-				</div>
-				<div class="subheading subheading-right">
-					<h3>July 2018 - March 2020</h3>
-				</div>	
-			</div>
-			<div class="content">
-				<ul>
-					<li>Designed social augmented reality marketing experiences which work on Snapchat and Facebook</li>
-					<li>Programmed a web-based augmented reality project</li>
-					<li>Modeled objects in Blender to be used in augmented reality</li>
-					<li>Utilized the Unity Game Engine to create a virtual reality therapeutic experience for the elderly</li>
-					<li>Programmed an Alexa skill with Node.js to provide marketing information for clients of a company</li>
-					<li>Provided IT support during video game tournaments through New Territory Gaming</li>
+			<div class="entry">
+				<h3 class="entry-headline">Resident Assistant (RA) <span class="entry-headline-right">August 2021 - </span></h3>
+				<p class="entry-subheadline"><span>Kent State,</span> <i>Kent Ohio</i></p>
+				<ul class="entry-content">
+					<li>Designed and executed community-building programs focused on academic success, mental health, and diversity and inclusion</li>
+					<li>Fostered positive relationships between residents and housing staff as a liaison between 80 residents and housing staff and collaborating with other RAs to enforce policies and create a safe and inclusive environment</li>
+					<li>Utilized strong organizational and time management skills to balance demanding responsibilities with academic coursework</li>
 				</ul>
 			</div>
-		</div>
 
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">Information Technology Intern</h1>
-				<h2 class="subheading">Thomarios</h2>
-				<div class="subheading subheading-left">
-					<h3>Copley, Ohio</h3>
-				</div>
-				<div class="subheading subheading-right">
-					<h3>June 2019 - July 2019</h3>
-				</div>	
-			</div>
-			<div class="content">
-				<ul>
-					<li>Participated in the All Akron Student Engineering Program which had multiple engineering workshops and ended in a career fair with a 2 week internship</li>
-					<li>Demonstrated IT knowledge and teamwork working with other IT department members to best serve clientele</li>
-					<li>Diagnosed and fixed issues in company hardware</li>
-					<li>Aided in the restoration of an Apple II computer to be displayed in the companies entrance</li>
+			<div class="entry">
+				<h3 class="entry-headline">Engineering Intern <span class="entry-headline-right">January 2020 - March 2020</span></h3>
+				<p class="entry-subheadline"><span>Masters Precision Machining Inc,</span> <i>Kent Ohio</i></p>
+				<ul class="entry-content">
+					<li>Selected as one of four students to participate in Hoban High School's Pre-Engineering III Co-op experience</li>
+					<li>Demonstrated proficiency in using Fusion 360 CAD software to design and create 3D models for CNC milling</li>
 				</ul>
 			</div>
-		</div>
 
-		<div class="box empty">
-			<div class="header">
+			<div class="entry">
+				<h3 class="entry-headline">Technology Intern <span class="entry-headline-right">July 2018 - March 2020</span></h3>
+				<p class="entry-subheadline"><span>New Territory,</span> <i>Akron Ohio</i></p>
+				<ul class="entry-content">
+					<li>Developed and implemented social augmented reality marketing experiences for Snapchat and Facebook using software manipulation techniques</li>
+					<li>Designed a virtual reality guided meditation application for the elderly utilizing the Unity Game Engine</li>
+					<li>Programmed an Amazon Alexa skill with Node.js to provide information company and streamlining customer inquiries</li>
+					<li>Provided on-demand technical support and customer service during video game tournaments through New Territory Gaming</li>
+				</ul>
 			</div>
-			<div class="content">
-			</div>
-		</div>	
 
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">Pizza Delivery Driver</h1>
-				<h2 class="subheading">"Your" Pizza Shop</h2>
-				<div class="subheading subheading-left">
-					<h3>Akron, Ohio</h3>
-				</div>
-				<div class="subheading subheading-right">
-					<h3>June 2019 - July 2019</h3>
-				</div>	
-			</div>
-			<div class="content">
-				<ul>
-					<li>Provided excellent customer service skills and ensured customer satisfaction when delivering pizzas</li>
-					<li>Maintained the restaurant’s cleanliness, washed dishes, and aided chefs in food preparation during free time</li>
+			<div class="entry">
+				<h3 class="entry-headline">IT Intern <span class="entry-headline-right">June 2011 - July 2019</span></h3>
+				<p class="entry-subheadline"><span>Thomarios,</span> <i>Copley Ohio</i></p>
+				<ul class="entry-content">
+					<li>Participated in the All Akron Student Engineering Program attending multiple engineering, professionalism, and leadership workshops including a career fair which lead to a 2-week internship as part of the program</li>
+					<li>Collaborated with other IT department members to manage and maintain company computers, demonstrating a strong understanding of IT concepts and effective teamwork skills</li>
 				</ul>
 			</div>
 		</div>	
-	</div>
 
-<div id="education-full" class="full container">	
 
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">Kent State University</h1>
-				<h2 class="subheading">Computer Science</h2>
-				<h2 class="subheading subheading-small">College of Arts & Sciences</h2>
-				<h2 class="subheading subheading-small">Freshman</h2>
-				<div class="subheading subheading-left">
-					<h3>Kent, Ohio</h3>
-				</div>
-				<div class="subheading subheading-right">
-					<h3>August 2020 - May 2024</h3>
-				</div>	
-			</div>
+		<div class="section">
+			<h2 class="section-headline">About Me</h2>
+			<hr class="section-headline-hr">
 
-			<div class="content">
-			</div>
-		</div>
-
-		<div class="box more-info return">
-			<div class="header">
-				<h1 class="heading">Return</h1>
-			</div>
-			<div class="content">
-				<p>Return to the main menu</p>
-			</div>
-		</div>
-
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">Archbishop Hoban High School</h1>
-				<h2 class="subheading subheading-small">Graduate</h2>
-				<div class="subheading subheading-left">
-					<h3>Akron, Ohio</h3>
-				</div>
-				<div class="subheading subheading-right">
-					<h3>August 2016 - May 2020</h3>
-				</div>	
-			</div>
-			<div class="content">
-			</div>
-		</div>
-
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">Courses Taken</h1>
-			</div>
-			<div class="content">
-				<ul>
-					<li>Computer Science I (@University of Akron)</li>
-					<br>
-					<li>Computer Science II: Data Structures and Abstractions (Current)</li>
-					<li>Discrete Structures for Computer Science (Current)</li>
-					<br>
-					<li>Computer Science I/II & AP Computer Science Principals (High School)</li>
-					<li>Pre-Engineering I/II/III (High School)</li>
-					<li>Digital Imaging & Graphic Design (High School)</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="box empty">
-			<div class="header">
-				<!-- <h1 class="heading">CNC Shop Intern</h1> -->
-				<!-- <h2 class="subheading">Masters Precision Machining Inc</h2> -->
-				<!-- <div class="subheading subheading-left"> -->
-					<!-- <h3>Kent, Ohio</h3> -->
-				<!-- </div> -->
-				<!-- <div class="subheading subheading-right"> -->
-					<!-- <h3>January 2020 - March 2020</h3> -->
-				<!-- </div>	 -->
-			</div>
-			<div class="content">
-<!-- 				<ul>
-					<li>One of 4 students who took part in a Pre-Engineering III Co-op experience at my High School</li>
-					<li>Used Fusion 360 CAD software to create 3D models to be milled on CNC machines</li>
-					<li>Aided machinists milling and programming on CNC machines</li>
-				</ul> -->
-			</div>
-		</div>
-
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">Activities</h1>
-			</div>
-			<div class="content">
-				<ul style="list-style: none">
-					<li>
-						<div>
-							<p>The Association for Computing Machinery (ACM)</p>
-							<p>University of Akron</p>
-							<p>January 2020 - March 2020</p>
-						</div>
-					</li>
-					<li>
-						<div>
-							<p>Tennis Player</p>
-							<p>Hoban</p>
-							<p>December 2016 - May 2018</p>
-						</div>
-					</li>
-					<li>
-						<div>
-							<p>Volunteering</p>
-							<p>Hickory Ridge Nursing Home and Rehab, Akron Rotary Camp, Haven of Rest, Peter Maurin Center</p>
-							<p>2016 - 2020</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>	
-
-		
-<div id="contact-full" class="full container">	
-
-		<div class="box">
-			<div class="header">
-				<h1 class="heading">Socials</h1>
-			</div>
-			<div class="content">
-				<a href="https://www.linkedin.com/in/hunter-jones-13668012a/"><button class="button-logo" id="linkedin-logo"></button></a>
-
-				<a href="https://github.com/Hunter-Jones"><button class="button-logo" id="github-logo"></button></a>
-
-				<a href="https://codepen.io/HunterTheSnake"><button class="button-logo" id="codepen-logo"></button></a>
-			</div>
-		</div>
-
-		<div class="box more-info return">
-			<div class="header">
-				<h1 class="heading">Return</h1>
-			</div>
-			<div class="content">
-				<p>Return to the main menu or click any logo to get redirected to it's website</p>
-			</div>
-		</div>
-
-		<div class="box">
-			<div class="header">
-				<h1>Message Me</h1>
-			</div>
-			<div class="content">
-				<a href="mailto:hunterj0915@gmail.com" subject=Hello%20Hunter><button class="button-logo" id="email-logo"></button></a></a>
-			</div>
-		</div>
-
-		<div class="box empty">
-			<div class="header">
-			</div>
-			<div class="content">
-			</div>
-		</div>
-
-		<div class="box empty">
-			<div class="header">
-			</div>
-			<div class="content">
-			</div>
-		</div>
-
-		<div class="box empty">
-			<div class="header">
-			</div>
-			<div class="content">
+			<div class="entry">
 				
+				<ul class="entry-content">
+					<li>I'm a Kent State University student with a major in computer science and a concentration in data science. I am passionate in studying data science and machine learning as well as working with R, C++, and Python</li>
+					<li>My interest in data science and machine learning has led me to take courses data science courses like Decision Making Under Uncertainty and Big Data Analytics as well as Calc II, Linear Algebra, CS III, Discrete Math, Algorithms, and Structure of Programming. These courses have given me a strong foundation in statistical analysis, data visualization, and machine learning algorithms</li>
+					<li>Thank you for visiting my webpage, and I look forward to the opportunity to work with you!</li>
+				</ul>
+<!-- 				<button class=button-download><a href="">Download Resume</a></button>
+				<br>
+				<button class=button-download><a href="">   Email Me   </a></button> -->
 			</div>
 		</div>
-	</div>	
-	<script type="text/javascript" src="./index.js"></script>
+	</div>
+
+<script type="text/javascript" src="./index.js"></script>
+
+<!--Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
