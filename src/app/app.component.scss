@@ -1,0 +1,94 @@
+@import "../styles.scss";
+
+
+.sections
+{
+	margin: 0;
+	padding-left: $left-right-padding;
+	padding-right: $left-right-padding;
+}
+.section:not(:nth-of-type(1))
+{
+	margin-top: $space-between-sections;
+}
+
+
+.section-headline {
+	color: $section-headline-color;
+	text-align: center;
+
+	margin: 0;
+	padding: 0;
+}
+.section-headline-hr {
+	background-color: $section-headline-hr-color;
+	color: $section-headline-hr-color;
+
+	margin-bottom: $space-between-headline-hr;
+	width: 50%;
+    text-align: center;
+    margin:auto
+}
+.entry {
+	margin: 0;
+	margin-bottom: $space-between-entries;
+	padding: 0;
+}
+.section .entry:last-child {
+	margin-bottom: 0;
+}
+
+.entry-headline {
+	color: $entry-headline-color;
+	font-size: $entry-headline-size;
+	text-align:left;
+
+	margin: 0;
+	margin-bottom: $space-between-headline;
+	padding: 0;
+}
+.entry-headline-right {
+	color: $entry-headline-right-color;
+	float: right;
+
+
+	margin: 0;
+	padding: 0;
+}
+@media screen and (max-width: 600px) {
+	.entry-headline-right {
+		font-size: $text-size;
+    width:100%;
+    display:block;
+    float:left;
+	}
+}
+.entry-subheadline {
+	margin: 0;
+	padding: 0;
+}
+.entry-subheadline span {
+	font-weight: 600;
+}
+.entry-content {
+	margin-left: $space-between-bulletpoints-left;
+	margin-top: $space-between-bulletpoint-top;
+	padding: 0;
+}
+.entry-content li {
+	list-style: none;
+
+	margin: 0;
+	margin-bottom: $space-between-bulletpoints;
+	padding: 0;
+}
+.entry-content li:before {  
+	content: "\00BB"; /*Unicode » */
+
+	margin-right: $space-right-bulletpoints-symbol;
+
+}
+// .entry-content li::last-child
+// {
+	
+// }
