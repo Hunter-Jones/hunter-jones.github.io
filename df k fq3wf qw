@@ -1,0 +1,374 @@
+[33mcommit aa7315add29390496e85a414f7743a61c704b771[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Hunter Jones <hdog0915@gmail.com>
+Date:   Tue May 30 22:51:21 2023 -0400
+
+    Fix angular
+
+[33mcommit 0024ac5b7734d688aa414d016f714072467f6f4a[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mgh-pages[m[33m)[m
+Author: Hunter Jones <hdog0915@gmail.com>
+Date:   Tue May 30 22:13:52 2023 -0400
+
+    Switch to angular
+    
+    Switch from traditional html/css to angular for webpage
+
+[33mcommit 49d87664e0c9c758e7ebfd52bdc35013f67847a5[m
+Author: Hunter Jones <hdog0915@gmail.com>
+Date:   Mon May 29 00:07:57 2023 -0400
+
+    Remove Old Files
+    
+    Remove css, js, and image files from previous revisions
+
+[33mcommit 50ed0a4701ef3776659288d8a13178ab0170c146[m
+Author: Hunter Jones <hdog0915@gmail.com>
+Date:   Wed Mar 15 01:08:22 2023 -0400
+
+    Fix scoping issue
+
+[33mcommit 4e59411c48fa1e2ca2bda31fe2e09f8617a63ac4[m
+Author: Hunter Jones <hdog0915@gmail.com>
+Date:   Wed Mar 15 01:04:35 2023 -0400
+
+    Add images
+    
+    Add images for links
+
+[33mcommit 5cea8e3bb801f4ef12286983080fbf2dcb600cc5[m
+Author: Hunter Jones <hdog0915@gmail.com>
+Date:   Wed Mar 15 01:01:14 2023 -0400
+
+    Complete Website Redesign
+    
+    Complete Rehaul of website structured around being simple and easy to navigate
+
+[33mcommit ecebdb860a7cb4a882db77dac7bb39569df2b0fe[m
+Author: Hunter Jones <hunterj0915@gmail.com>
+Date:   Sun Aug 23 14:28:12 2020 -0400
+
+    Add resume link to button and modified description on landing section
+
+[33mcommit 7ac445fd8e069c320f4dac33d58d669d620bb254[m
+Author: Hunter Jones <hunterj0915@gmail.com>
+Date:   Sun Aug 23 14:08:17 2020 -0400
+
+    Make each div in projects a link to its project, modify the text in the return box for contact and projects, and edit general CSS to be centered
+
+[33mcommit 52fcbf942699255ba6dfa5260c2a0448267f03e3[m
+Author: Hunter Jones <hunterj0915@gmail.com>
+Date:   Sun Aug 23 12:18:07 2020 -0400
+
+    Add mailto link to message me
+
+[33mcommit 9eb4f8c72cba4095224f8b28222bed84f9652afc[m
+Author: Hunter Jones <hunterj0915@gmail.com>
+Date:   Fri Aug 21 14:58:15 2020 -0400
+
+    Add buttons with links to linkedin, github, and codepen, and added stylization for link buttons
+
+[33mcommit b68423e2c4811909c9226ee31ced357380ee9c35[m
+Author: Hunter Jones <hunterj0915@gmail.com>
+Date:   Thu Aug 20 02:03:20 2020 -0400
+
+    Add resume button with no content and add empty contact info section
+
+[33mcommit 7c99dd8c15752cc2db22d73653bc84f475d972c2[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 19:45:21 2020 -0400
+
+    Add CSS for button div
+
+[33mcommit facd50d770ae90c79ad9099df0891a6b26d86fea[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 19:32:13 2020 -0400
+
+    Add invert button code, fix strobe button effect staying after switching pages
+
+[33mcommit 018bbad65e32b46ac7886443a88f4aab839524f4[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 19:14:27 2020 -0400
+
+    Add animation for strobe light button and invert button
+
+[33mcommit abdd18d25d6846cfc7c058ba5dbe8e8f6740ecd7[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 18:47:17 2020 -0400
+
+    Add button stylization
+
+[33mcommit 59c0380977b128fe3bc8ba1c387fd15a05220966[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 18:16:15 2020 -0400
+
+    Add github project description, modify HTML for github projects and JS for modularity, and add a default message for each project if github is down
+
+[33mcommit 62d39b7983f1cdaebf235e91b11461781662697b[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 18:14:57 2020 -0400
+
+    Add github project description, modify HTML for github projects and JS for modularity, and add a default message for each project if github is down
+
+[33mcommit 5b08a86d106773e5445d0cf20979baf7c34b96f7[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 14:55:17 2020 -0400
+
+    Add function to loop through all github projects, add github-project class name to all projects, add ability to choose message size limit in parseMessage function, and add comments to JS
+
+[33mcommit 3938a85b8acd3ad4ad2d6f385a7efce0bae33622[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 02:17:36 2020 -0400
+
+    Add JS to use github rest API and find the latest commit for a project and set an element's data to it
+
+[33mcommit 7abe00902e5265fa8fd17b62ace63cae7a12ac4a[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Aug 18 00:50:42 2020 -0400
+
+    Add headers for each box in the projects section
+    add the activities box to the education section and added the necessary CSS
+
+[33mcommit b83e72340a0500c4d9bc07d156e2bbb1a1b27662[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Mon Aug 17 16:31:30 2020 -0400
+
+    Add button to about me to filter through rainbow lights
+    Change about me heading to my name
+    Fix CSS for mobile landscape to allow flex order to push .return to top and .empty to bottom
+
+[33mcommit ae8e407eac820fe26576c7c960f70c317a6f8e27[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sun Aug 16 21:51:23 2020 -0400
+
+    Add CSS media queries for mobile support
+
+[33mcommit 4ce6b03af1b4fc2acef2c27b4909689cbc25ac08[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sun Aug 16 20:50:28 2020 -0400
+
+    Add comments to and clean up JS
+
+[33mcommit 847526d16bb2dade759fda380c8eecd212e424bb[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sun Aug 16 18:51:09 2020 -0400
+
+    Restructure homepage boxes HTML to fit the pattern and add a description to each box, modify JS to work with restructured homepage boxes
+
+[33mcommit 973c8e9ea5e332ba936d1601314a7fffc00c028b[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sun Aug 16 13:55:01 2020 -0400
+
+    Modify JS to make subpages inverse color by default
+
+[33mcommit 2266cbaa4d8669658a8f54446b261b797970f034[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sun Aug 16 13:24:54 2020 -0400
+
+    Add 2 boxes for education section and adjust subheading's margins
+
+[33mcommit e6eebf9d420a4aafcdb18be8b685dd162eeff03b[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sun Aug 16 13:04:06 2020 -0400
+
+    Remove monochrome option and make hover change boxes to inverse color rather than gray
+
+[33mcommit 3d72209d873d047c4582a87777b95cdab31cc947[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sun Aug 16 00:46:52 2020 -0400
+
+    Add remaining blocks for experience, modify structure of HTML adding a section for location, and enhanced the CSS to fit better
+
+[33mcommit 36919be6548d418073837bae33bd2af4d38b70a4[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sun Aug 16 00:01:35 2020 -0400
+
+    Add section block to experience section and make small improvement to CSS for ul
+
+[33mcommit 22f9a7b2c86a4e0f241f06f1dc7b93eb288a2e6c[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sat Aug 15 23:37:56 2020 -0400
+
+    Restructure html and create first block for experience section and added simple CSS
+
+[33mcommit 6c187d8f1a954d4cfaba4b90aaf3e4de59cf6189[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sat Aug 15 19:14:40 2020 -0400
+
+    Complete Rehaul
+    
+    Removed all files for original Portfolio
+    Created the template for a new portfolio website featuring rainbow colored blocks
+
+[33mcommit 3c18be0ecb8f8f0acad2ffba9f3a122ef2e31904[m
+Author: Hunter Jones <hdog0915@gmail.com>
+Date:   Fri Jul 12 20:09:09 2019 -0400
+
+    Fix Scroll Issue
+    
+    Modify fix for scroll issue
+
+[33mcommit 5f16e168fe9f4ffbc0cb07bea9ed53fc64eddd36[m
+Author: Hunter Jones <hdog0915@gmail.com>
+Date:   Fri Jul 12 20:03:27 2019 -0400
+
+    Fix Scroll issue
+    
+    Fix an issue where moving the mouse while scrolling causes it to continuously scroll.
+
+[33mcommit 8501cff4bf3d15097f26507da5cac44901239577[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sat Mar 30 00:00:26 2019 -0400
+
+    Fix gramatical errors
+    
+    Last minute fix of minor grammar errors
+
+[33mcommit ff9aa82444f0704a19fb689543568fb9c05cff3c[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 23:56:14 2019 -0400
+
+    Fix Scroll on iOS
+    
+    -Fix odd bug where scroll would not work on iPad github pages, but worked in Node test server on same device
+
+[33mcommit 3a90962e7857f3b09d6cabd42d298a2ca10cf5a8[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 23:40:45 2019 -0400
+
+    Final Update
+    
+    - Fix all bugs that will be fixed before AASEP talk
+    - Modify scroll permission (still allows dt on iPad)
+    - Adds button hold down on mobile instead of just PC
+    - Minor CSS changes
+
+[33mcommit 19000bf4a007a30e4fc0e02aa34795fe136694ac[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 23:39:15 2019 -0400
+
+    Delete package-lock.json
+
+[33mcommit 7cd6fabe328ca665c43d7cbb6d40dfa1a93ead8a[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 23:39:03 2019 -0400
+
+    Delete package.json
+
+[33mcommit 50019a0a75715b4a8ea31ac8c86560a9ebd58a42[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 23:38:54 2019 -0400
+
+    Delete js.js
+
+[33mcommit b8f03c79cbff5916a8ad116bf68fc3c53b1ea102[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 23:38:42 2019 -0400
+
+    Delete css.css
+
+[33mcommit 404c0af0424381ae1eaa9bc2a6077954512911e3[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 23:38:32 2019 -0400
+
+    Delete homepage.html
+
+[33mcommit 0517e08bfef5688a040925d9c02e2761bbb8817b[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 23:38:02 2019 -0400
+
+    Delete app.js
+
+[33mcommit bf8a1346e7a553a62260556d6ae6571a7bf93963[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Wed Mar 27 19:17:33 2019 -0400
+
+    Add Small Update
+    
+    -Fix resume
+    -Add scroll on arrows
+    -Disable mobile zoom on iPad
+
+[33mcommit 4f137847c73cebe3daed9f1cf666d4b3f8629a35[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Mar 26 22:49:29 2019 -0400
+
+    Fix mobile
+    
+    Remove zoom on mobile
+    Add big area to count for button press
+
+[33mcommit b5f307c01aa3158829d6eca054d3ee8bce7c00e5[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Mar 26 22:23:38 2019 -0400
+
+    Fix
+
+[33mcommit 93b481624a5d5621866a18d9bdaccfec16b71ecd[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Mar 26 22:10:42 2019 -0400
+
+    Fix rehaul
+
+[33mcommit f34ba210807c987745769b6764bd2d54f60540ae[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Tue Mar 26 21:43:58 2019 -0400
+
+    Complete Rehaul
+    
+    Add complete rehaul creating a much more simple and clean UI, looks completely different, for AASEP
+
+[33mcommit 7bb65bb2023e4640115fbfc053176b1e70868c79[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sat Jan 26 14:55:53 2019 -0500
+
+    Mobile Fix
+    
+    Add small fix to skills and icon for mobile
+
+[33mcommit d694bf9725e3b4c45b97af22d2fa6b445a445b30[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Sat Jan 26 14:49:56 2019 -0500
+
+    Overhall
+    
+    Add gradient bg
+    Add links
+    Change text
+    -Ready for use-
+
+[33mcommit 5708b225a8645bff53cc468d4ae71f3b0cedcfc5[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Fri Jan 25 22:55:01 2019 -0500
+
+    Revert "Initial commit"
+    
+    This reverts commit 4f4c28b271dcdc40920c09e05133b23b43694130.
+
+[33mcommit a08d21702d1f4165054c99e0a2febe9580908528[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Fri Jan 25 22:53:37 2019 -0500
+
+    Revert "Update readme"
+    
+    This reverts commit c4779dfd7005b442a48760b18d781c0c1d40522c.
+
+[33mcommit c4779dfd7005b442a48760b18d781c0c1d40522c[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Fri Jan 25 22:14:13 2019 -0500
+
+    Update readme
+    
+    Add permalink to index.html
+
+[33mcommit cc9ed58ba28afc308a161fdd7a160cb5fff342e7[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Fri Jan 25 22:01:57 2019 -0500
+
+    Add files via upload
+    
+    Add initial portfolio page
+
+[33mcommit 4f4c28b271dcdc40920c09e05133b23b43694130[m
+Author: Hunter <hdog0915@gmail.com>
+Date:   Fri Jan 25 22:01:06 2019 -0500
+
+    Initial commit
