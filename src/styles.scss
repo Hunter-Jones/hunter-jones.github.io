@@ -66,38 +66,38 @@ $button-padding: 16px 32px;
 $button-min-width: 40%;
 
 body {
-	font-family: var(--main-font);
+	font-family: $main-font;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 p, li {
-	font-size: var(--text-size);
+	font-size: $text-size;
 }
 
-/*Button*/
-.button-download {
-    background-color: var(--main-color);
+// /*Button*/
+// .button-download {
+//     background-color:$main-color;
   
-    text-align: center;
-    cursor: pointer;
+//     text-align: center;
+//     cursor: pointer;
   
-      min-width: var(--button-min-width);
-      padding: var(--button-padding);
-    border: none;
+//       min-width: $button-min-width;
+//       padding: $button-padding;
+//     border: none;
   
-    display: grid;
-    margin: auto;
-  }
-  .button-download:nth-of-type(1){
-      margin-top: var(--space-above-button);
-  }
-  .button-download:hover {
-    background-color: var(--navbar-active-bgcolor);
-  }
-  .button-download a {
-      text-decoration: none!important;
-      color: white!important;
-      font-size: var(--button-text-size);
-  }
+//     display: grid;
+//     margin: auto;
+//   }
+//   .button-download:nth-of-type(1){
+//       margin-top: $space-above-button;
+//   }
+//   .button-download:hover {
+//     background-color: $navbar-active-bgcolor;
+//   }
+//   .button-download a {
+//       text-decoration: none!important;
+//       color: white!important;
+//       font-size: $button-text-size;
+//   }
