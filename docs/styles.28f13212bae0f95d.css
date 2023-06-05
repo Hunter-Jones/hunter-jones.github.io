@@ -1,4 +1,4 @@
-body{font-family:var(--main-font);margin:0;padding:0}p,li{font-size:var(--text-size)}.button-download{background-color:var(--main-color);text-align:center;cursor:pointer;min-width:var(--button-min-width);padding:var(--button-padding);border:none;display:grid;margin:auto}.button-download:nth-of-type(1){margin-top:var(--space-above-button)}.button-download:hover{background-color:var(--navbar-active-bgcolor)}.button-download a{text-decoration:none!important;color:#fff!important;font-size:var(--button-text-size)}@charset "UTF-8";/*!
+body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0}p,li{font-size:1rem}@charset "UTF-8";/*!
 * Bootstrap  v5.2.3 (https://getbootstrap.com/)
 * Copyright 2011-2022 The Bootstrap Authors
 * Copyright 2011-2022 Twitter, Inc.
