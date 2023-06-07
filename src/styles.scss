@@ -75,6 +75,14 @@ body {
 p, li {
 	font-size: $text-size;
 }
+li {
+	line-height: 20px;
+}
+
+.unstyled-a {
+	text-decoration: none;
+	background-color: black;
+}
 
 // /*Button*/
 // .button-download {

@@ -1,1 +1,25 @@
 @import '../tabs.component.scss';
+
+// Chooses to either have the date of graduation at the top or bottom depending on the device size
+// To create a more responsive website
+#big-ehr
+{
+    display: inherit;
+}
+#small-ehr
+{
+    display: none ;
+    color: $entry-headline-right-color;
+}
+
+@media screen and (max-width: 700px) {
+    #big-ehr
+    {
+        display: none;
+    }
+    #small-ehr
+    {
+        display: inherit ;
+    }
+    
+}
