@@ -10,18 +10,26 @@
 {
   color: white;
 }
-// .logo
-// {
-  
-// }
 .logo img
 {
-  width: 27px;
+  width: 33px;
   margin-right: 13px;
 }
-
 .active a
 {
   color: $ternary-color!important;
+  font-weight: 600;
+}
+
+.ms-auto
+{
+  margin-right: $navbar-space;
+}
+.navbar-brand
+{
+  margin-right: $navbar-space*2;
+  font: 'Brush Script MT', cursive;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.5em;
   font-weight: 600;
 }
